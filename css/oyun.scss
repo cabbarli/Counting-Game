@@ -1,0 +1,70 @@
+@import "reset";
+@import "variables";
+html, body {
+    height: 100%;
+    background-color: rgb(250, 115, 4);
+  }
+  .main-box {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+.play-box {
+    border-radius: 5px;
+    position: absolute;
+    text-align: center;
+    width: 530px;
+    background-color: rgba(47, 45, 45, 0.814);
+    color:$white;
+    padding: 30px;
+    margin: auto;
+    margin-top: 20px;
+    h2 {
+        padding:10px;
+        width: 95%;
+        border: 2px solid gray;
+        margin: auto;
+        margin-bottom: 10px;
+    }
+    span {
+        margin: $margin-size;
+        font-size: $font-150;
+        width: 43px;
+        display: inline-block;
+    }
+    .result {
+        width: 90px;
+        font-size: 130%;
+        outline-style: none;
+        margin: $margin-size;
+    }
+    .answer {
+        border-style: none;
+        background-color: rgba(254, 246, 18, 0.676);
+        margin: $margin-size;
+        padding: 7px;
+        color: $white;
+        font-size: 110%;
+        transition: 250ms;
+        border-radius: 15px;
+        &:hover {
+            background-color: $green;
+        }
+    }
+    #true, #false {
+        display: inline-block;
+        text-align: center;
+        justify-content: center;
+        margin: $margin-size;
+        font-size: $font-150;
+        padding: 10px;
+        width: 60px;
+    }
+    #true {
+        background-color: $green;
+    }
+    #false {
+        background-color:$red;
+    }
+}
