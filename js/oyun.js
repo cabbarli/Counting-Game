@@ -50,7 +50,7 @@ function newQuestion(){
     }
     if(result.value==ans){
         True.textContent=Number(True.textContent) + 1;
-    }else if(result.value==""){
+    }else if(result.value==" "){
         alert("xananı boş qoymayın");
     }
     else if(isNaN(val)){
@@ -73,6 +73,7 @@ function newQuestion(){
         False.textContent=0;
        }
     }
+    document.querySelector(".result").value=" ";
    newQuestion();
    }
   
