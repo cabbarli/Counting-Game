@@ -34,7 +34,7 @@ function newQuestion(){
     window.onload=function(){
         newQuestion();
     }
- 
+
     // cavabla buttonuna basildiginda edilecek islem funksiyasi
     answer.onclick=function(){
         let ans, n1, n2, val;
@@ -56,24 +56,31 @@ function newQuestion(){
     else if(isNaN(val)){
         alert("xanaya rəqəm yazın");
     }
-    else if(True.textContent==30){
-        alert("Təbrik edirik 30 düz cavaba çatdınız");
-        reset();
-    } else if(False.textContent==30){
-       alert("Təəssüfki 30 səhv cavabınız var");
-       reset();
-    }
+   
     else {
         False.textContent=Number(False.textContent) + 1;
     }
-   
-   function reset(){
-    if(True.textContent>=30 || False.textContent>=30){
-        True.textContent=0;
-        False.textContent=0;
-       }
-    }
+        ll();
+        function ll(){
+            if(True.textContent==30){
+              setTimeout(function(){
+                alert("Təbrik edirik 30 düz cavabınız var və oyun yenidən başladılır");
+                reset();
+              },2) 
+            } else if(False.textContent==30){
+                setTimeout(function(){
+                    alert("Təəssüfki 30 səhv cavabınız var və oyun yenidən başladılır");
+                    reset();
+                },2)
+             
+            }
+            function reset(){
+                if(True.textContent>=30 || False.textContent>=30){
+                    True.textContent=0;
+                    False.textContent=0;
+                   }
+                }
+        }
     document.querySelector(".result").value=" ";
    newQuestion();
    }
-  
